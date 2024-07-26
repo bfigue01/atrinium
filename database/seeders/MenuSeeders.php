@@ -14,9 +14,15 @@ class MenuSeeders extends Seeder
     {
         //Menu de clientes
         MenuCuentas::create([
-            'id_usuario_tipo' => 1,
+            'id_usuario_tipo' => 2,
             'opcion' => 'Solicitar nuevo rol',
-            'ruta'=>'informacion_cliente',
+            'ruta'=>'Solicitar_rol',
+        ]);
+        //Menu admin
+        MenuCuentas::create([
+            'id_usuario_tipo' => 1,
+            'opcion' => 'Solicitudes',
+            'ruta'=>'solicitudes',
         ]);
     }
 }

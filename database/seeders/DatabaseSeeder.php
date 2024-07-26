@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
         $this->call(RolsSeeders::class); //Seeder de roles
         $this->call(MenuSeeders::class); //Seeder del menu
+        $this->call(UserSeeder::class); //Seeder admin
         // User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',

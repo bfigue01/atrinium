@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\User;
+use App\Models\MenuCuentas;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,6 +25,7 @@ class HomeController extends Controller
     public function index()
     {
         $user = auth()->user()->rol_id;
-        return view('home');
+        $menu = MenuCuentas::whereIdUsuarioTipo($user)->get();
+        return view('home',compact('menu'));
     }
 }
